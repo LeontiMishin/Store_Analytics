@@ -1,0 +1,6 @@
+interface Supplier {
+    id: number;
+    name: string;
+    phoneNumber?: string;
+    address?: string;
+}
