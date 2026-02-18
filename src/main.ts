@@ -1,5 +1,5 @@
-import type { Supplier } from "./data/Supplier";
-import { Category } from "./data/Category";
+import type { Supplier } from "./data/StoreData";
+import { Category } from "./model/Types";
 
 interface StockEntry {
     warehouse: string;
@@ -28,6 +28,9 @@ interface DiscountRule {
     percent: number;
     minRating?: number;
 }
+
+
+
 
 const supplier: Supplier = {
     id: 1,
