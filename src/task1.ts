@@ -21,6 +21,5 @@ products.forEach(product => {
   const specsText = product.specs ? ` | specs: ${Object.entries(product.specs).map(([k, v]) => `${k}=${v}`).join(", ")}`: "";
 
   console.log( 
-    `- ${product.name} [${product.id}] | ${product.category} | supplier: ${supplier?.name} 
-    | available: ${available} (${stockStatus}) | rating: ${ratingText}${specsText} | ${priceText}`);
+    `- ${product.name} [${product.id}] | ${product.category} | supplier: ${supplier?.name} | available: ${available} (${stockStatus}) | rating: ${ratingText}${specsText} | ${priceText}`);
 });
