@@ -1,4 +1,4 @@
-import { Supplier, Product, Review, DiscountRule } from "src/model/Types"; 
+import { Supplier, Product, Review, DiscountRule } from "../model/Types"; 
 
 export const suppliers: Supplier[] = [
   { id: "SUP-1", name: "Nordic Devices" },

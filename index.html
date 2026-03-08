@@ -9,8 +9,13 @@
 <body>
     <div class="container mt-5">
         <h1>TypeScript</h1>
+
         <button id="task1" class="btn btn-primary">Ülesanne 1</button>
-        <button id="task2" class="btn btn-secondary">Ülesanne 2</button>
+
+        <a href="task2.html">
+            <button id="task2" class="btn btn-secondary">Ülesanne 2</button>
+        </a>
+        
         <div id="output" class="mt-4"></div>
     </div>
 
@@ -19,10 +24,6 @@
     <script type="module">
         document.getElementById('task1').addEventListener('click', () => {
             import('./dist/task1.js');
-        });
-
-        document.getElementById('task2').addEventListener('click', () => {
-            import('./dist/task2.js');
         });
     </script>
 </body>
