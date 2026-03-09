@@ -1,6 +1,5 @@
-import { products, suppliers, reviews, discountRules } from "src/data/storeData"; 
-import { calculateAvailable, getStockStatus, calculateAverageRating, applyDiscount, formatPrice, } from "src/services/stockService"; 
-
+import { products, suppliers, reviews, discountRules } from "./data/StoreData"; 
+import { calculateAvailable, getStockStatus, calculateAverageRating, applyDiscount, formatPrice, } from "./services/stockService"; 
 
 console.log("Live reload enabled."); 
 console.log("Products:"); 
@@ -21,6 +20,5 @@ products.forEach(product => {
   const specsText = product.specs ? ` | specs: ${Object.entries(product.specs).map(([k, v]) => `${k}=${v}`).join(", ")}`: "";
 
   console.log( 
-    `- ${product.name} [${product.id}] | ${product.category} | supplier: ${supplier?.name} 
-    | available: ${available} (${stockStatus}) | rating: ${ratingText}${specsText} | ${priceText}`);
+    `- ${product.name} [${product.id}] | ${product.category} | supplier: ${supplier?.name} | available: ${available} (${stockStatus}) | rating: ${ratingText}${specsText} | ${priceText}`);
 });

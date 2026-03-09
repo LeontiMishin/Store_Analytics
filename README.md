@@ -25,3 +25,6 @@ Looge TypeScriptis interaktiivne veebirakendus, mis:
 - looma elemendid dünaamiliselt (mitte kirjutama HTML-i käsitsi ette)
 
 ## Kuidas käivitada
+
+- Node.js ja npm peab olema installitud
+- Avage `index.html` brauseris või kasutage Live Server laiendust VS Codes

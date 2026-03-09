@@ -1,4 +1,4 @@
-import { Product, Review, DiscountRule } from "src/model/Types";
+import { Product, Review, DiscountRule } from "../model/Types";
 
 export function calculateAvailable(product: Product): number {
   return product.warehouses.reduce((sum, w) => sum + w.quantity, 0);

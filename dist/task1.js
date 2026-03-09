@@ -14,6 +14,5 @@ products.forEach(product => {
         priceText = `price: ${formatPrice(priceInfo.original)} -> ${formatPrice(priceInfo.discounted)}`;
     }
     const specsText = product.specs ? ` | specs: ${Object.entries(product.specs).map(([k, v]) => `${k}=${v}`).join(", ")}` : "";
-    console.log(`- ${product.name} [${product.id}] | ${product.category} | supplier: ${supplier?.name} 
-    | available: ${available} (${stockStatus}) | rating: ${ratingText}${specsText} | ${priceText}`);
+    console.log(`- ${product.name} [${product.id}] | ${product.category} | supplier: ${supplier?.name} | available: ${available} (${stockStatus}) | rating: ${ratingText}${specsText} | ${priceText}`);
 });
