@@ -1,7 +1,6 @@
 import { products, suppliers, reviews, discountRules } from "./data/StoreData"; 
 import { calculateAvailable, getStockStatus, calculateAverageRating, applyDiscount, formatPrice, } from "./services/stockService"; 
 
-
 console.log("Live reload enabled."); 
 console.log("Products:"); 
 

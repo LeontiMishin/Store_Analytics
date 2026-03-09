@@ -37,13 +37,16 @@ function renderProducts(list: Product[]) {
         const available = p.quantities.reduce((a, b) => a + b, 0)
         const status = getStockStatus(available)
 
+        const col = document.createElement("div")
+        col.className = "col"
+
         const card = document.createElement("div")
-        card.className = "card mb-2"
+        card.className = "card h-100"
 
         const statusClass =
             status === "IN_STOCK" ? "bg-success text-white" :
-            status === "LOW" ? "bg-warning text-dark" :
-            "bg-danger text-white"
+                status === "LOW" ? "bg-warning text-dark" :
+                    "bg-danger text-white"
 
         let specsText = ""
 
@@ -55,17 +58,18 @@ function renderProducts(list: Product[]) {
         }
 
         card.innerHTML = `
-  <div class="card-body">
-    <h5 class="card-title">${p.name}</h5>
-    <h6 class="card-subtitle mb-2 text-muted">${p.category}</h6>
-    <p class="card-text">Price: $${p.price.toFixed(2)}</p>
-    <p class="card-text">Available: ${available}</p>
-    <span class="badge ${statusClass}">${status.replace('_', ' ')}</span>
-    ${specsText}
-  </div>
+        <div class="card-body">
+            <h5 class="card-title">${p.name}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">${p.category}</h6>
+            <p class="card-text">Price: ${p.price.toFixed(2)} €</p>
+            <p class="card-text">Available: ${available}</p>
+            <span class="badge ${statusClass}">${status.replace('_', ' ')}</span>
+            ${specsText}
+        </div>
  `
 
-        container.appendChild(card)
+        col.appendChild(card)
+        container.appendChild(col)
 
     })
 
